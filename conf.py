@@ -51,11 +51,6 @@ autodoc_mock_imports = ['pyb', 'ulab', 'utime']
 #
 html_theme = 'alabaster'
 
-# Additional options for the theme.
-html_theme_options = {
-    'page_width': 'auto',
-}
-
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
