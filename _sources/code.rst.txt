@@ -1,0 +1,10 @@
+Code
+=====
+
+Some words about the Code
+
+.. toctree::
+   :maxdepth: 2
+   
+   classes
+   tasks

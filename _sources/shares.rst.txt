@@ -1,0 +1,9 @@
+Shares Class
+=============
+Implements a very simple interface for sharing data between multiple tasks. Shares 
+are simple variables, while queues are lists. Both data types are accessable from anywhere.
+
+.. automodule:: shares
+   :members:
+   :undoc-members:
+   :show-inheritance:
