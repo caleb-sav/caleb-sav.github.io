@@ -82,8 +82,8 @@ BOM
    * TMC4210 Step/Direction Controllers (2)
    * Miscellaneous electronics parts
 * `Limit Switch (2) <https://www.amazon.com/MXRS-Hinge-Momentary-Button-Switch/dp/B07MW2RPJY/ref=lp_5739467011_1_1?th=1>`_
-* `Power screw kit <https://www.youtube.com/watch?v=dQw4w9WgXcQ>`_
-* `3D Printed Parts <https://www.youtube.com/watch?v=dQw4w9WgXcQ>`_
+* `Power screw kit <https://www.amazon.com/dp/B07P8P6J5V?ref=ppx_pop_mob_ap_share>`_
+* 3D Printed Parts **[INSERT LINK]**
    * Support Connector (2)
    * Large Gear (2)
    * Lower Pen Connector
@@ -95,8 +95,6 @@ BOM
 * 1/2 in Pan-head wood screws (4)
 * 3/8 in Plywood
 
-Our instructor provided the microcontroller used for the project: the Nucleo L476 equiped 
-with a 'Shoe of Brian' for accessing the native USB. 
 
 Motor Driver Board
 ^^^^^^^^^^^^^^^^^^
@@ -105,9 +103,48 @@ controllers and pin headers for standard stepper motor drivers (TMC2208 in this 
 
 .. image:: ../Images/driverSchem.png
 .. image:: ../Images/driverBuilt.jpg
+   :width: 5 in
+   :align: center
 
 Motor Modification
 ^^^^^^^^^^^^^^^^^^
 While some teams chose to purchase their own stepper motors, we decided to use the ones 
 made available by our instructor. They appear to be 5- and 6-wire variants of the NMB 
-PM25S-048, likely surplus or refurbished condition.
+PM25S-048, likely surplus or refurbished condition. Because our driver is for 4-wire 
+steppers, the motors would need to be modified.
+
+5- and 6- wire stepper motors have a connection between the two phases of the motor 
+to simplify the driving circuitry. For these 4-wire drivers, this connection must 
+be broken. One option was to de-solder the PCB mounted to the motor and attach leads 
+directly to the coils, omitting the central ground on each. We preferred to retain 
+the convenient plug mounted to the PCB, so we opted for cutting the trace on the PCB 
+itself.
+
+.. image:: ../Images/stepperTrace.jpg
+   :width: 5 in
+   :align: center
+   
+On these motors, the connecting trace was found on both the top and the bottom of 
+the board, so desoldering it from the stepper motor was required.
+
+Power Screw Modifications
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Unfortunately, the mounting holes on the powerscrew nut were so close to the center 
+that the screw heads interfered with the center barrel. To remedy this, we drilled 
+and tapped new, smaller holes, further from the center, and used socket-head screws 
+for their smaller head diameter.
+
+.. image:: ../Images/nut1.jpg
+   :width: 5 in
+   :align: center
+
+This modification was enough to allow the screws to fit. We were concerned that the 
+smaller shoulder on these tiny screws would be detrimental to the 3D printed gear, 
+but this turned out to be unfounded.
+
+.. image:: ../Images/nut2.jpg
+   :width: 5 in
+   :align: center
+   
+
+

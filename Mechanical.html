@@ -97,9 +97,9 @@ and mesh with the original gear on the stepper motor.</p>
 </dl>
 </li>
 <li><p><a class="reference external" href="https://www.amazon.com/MXRS-Hinge-Momentary-Button-Switch/dp/B07MW2RPJY/ref=lp_5739467011_1_1?th=1">Limit Switch (2)</a></p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Power screw kit</a></p></li>
+<li><p><a class="reference external" href="https://www.amazon.com/dp/B07P8P6J5V?ref=ppx_pop_mob_ap_share">Power screw kit</a></p></li>
 <li><dl class="simple">
-<dt><a class="reference external" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">3D Printed Parts</a></dt><dd><ul>
+<dt>3D Printed Parts <strong>[INSERT LINK]</strong></dt><dd><ul>
 <li><p>Support Connector (2)</p></li>
 <li><p>Large Gear (2)</p></li>
 <li><p>Lower Pen Connector</p></li>
@@ -115,21 +115,41 @@ and mesh with the original gear on the stepper motor.</p>
 <li><p>1/2 in Pan-head wood screws (4)</p></li>
 <li><p>3/8 in Plywood</p></li>
 </ul>
-<p>Our instructor provided the microcontroller used for the project: the Nucleo L476 equiped
-with a ‘Shoe of Brian’ for accessing the native USB.</p>
 </section>
 <section id="motor-driver-board">
 <h3>Motor Driver Board<a class="headerlink" href="#motor-driver-board" title="Permalink to this headline">¶</a></h3>
 <p>A motor driver PCB was also provided with an two integrated TMC4210 Step/Direction
 controllers and pin headers for standard stepper motor drivers (TMC2208 in this case).</p>
 <img alt="_images/driverSchem.png" src="_images/driverSchem.png" />
-<img alt="_images/driverBuilt.jpg" src="_images/driverBuilt.jpg" />
+<a class="reference internal image-reference" href="_images/driverBuilt.jpg"><img alt="_images/driverBuilt.jpg" class="align-center" src="_images/driverBuilt.jpg" style="width: 5in;" /></a>
 </section>
 <section id="motor-modification">
 <h3>Motor Modification<a class="headerlink" href="#motor-modification" title="Permalink to this headline">¶</a></h3>
 <p>While some teams chose to purchase their own stepper motors, we decided to use the ones
 made available by our instructor. They appear to be 5- and 6-wire variants of the NMB
-PM25S-048, likely surplus or refurbished condition.</p>
+PM25S-048, likely surplus or refurbished condition. Because our driver is for 4-wire
+steppers, the motors would need to be modified.</p>
+<p>5- and 6- wire stepper motors have a connection between the two phases of the motor
+to simplify the driving circuitry. For these 4-wire drivers, this connection must
+be broken. One option was to de-solder the PCB mounted to the motor and attach leads
+directly to the coils, omitting the central ground on each. We preferred to retain
+the convenient plug mounted to the PCB, so we opted for cutting the trace on the PCB
+itself.</p>
+<a class="reference internal image-reference" href="_images/stepperTrace.jpg"><img alt="_images/stepperTrace.jpg" class="align-center" src="_images/stepperTrace.jpg" style="width: 5in;" /></a>
+<p>On these motors, the connecting trace was found on both the top and the bottom of
+the board, so desoldering it from the stepper motor was required.</p>
+</section>
+<section id="power-screw-modifications">
+<h3>Power Screw Modifications<a class="headerlink" href="#power-screw-modifications" title="Permalink to this headline">¶</a></h3>
+<p>Unfortunately, the mounting holes on the powerscrew nut were so close to the center
+that the screw heads interfered with the center barrel. To remedy this, we drilled
+and tapped new, smaller holes, further from the center, and used socket-head screws
+for their smaller head diameter.</p>
+<a class="reference internal image-reference" href="_images/nut1.jpg"><img alt="_images/nut1.jpg" class="align-center" src="_images/nut1.jpg" style="width: 5in;" /></a>
+<p>This modification was enough to allow the screws to fit. We were concerned that the
+smaller shoulder on these tiny screws would be detrimental to the 3D printed gear,
+but this turned out to be unfounded.</p>
+<a class="reference internal image-reference" href="_images/nut2.jpg"><img alt="_images/nut2.jpg" class="align-center" src="_images/nut2.jpg" style="width: 5in;" /></a>
 </section>
 </section>
 </section>
@@ -160,6 +180,7 @@ PM25S-048, likely surplus or refurbished condition.</p>
 <li class="toctree-l3"><a class="reference internal" href="#bom">BOM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#motor-driver-board">Motor Driver Board</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#motor-modification">Motor Modification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#power-screw-modifications">Power Screw Modifications</a></li>
 </ul>
 </li>
 </ul>
