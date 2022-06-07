@@ -23,4 +23,4 @@ values, then returns to State 1 to start the process over.
    :caption: Related Classes
    
    stepper
-   dcDriver
+   servo

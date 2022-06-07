@@ -47,9 +47,27 @@ kinematics and the jacobian) are derived below.
 .. image:: ../Images/handCalcs3.jpg
 .. image:: ../Images/handCalcs4.jpg
 
+To ensure that the Newton-Raphson approach would work, we simulated the system using Jupyter. **[Probably link to the notebook]**
+The Newton-Raphson algorithm was applied to the points in a circle, then the forward kinematics 
+were solved to get the resulting X Y points. As shown in the animation below, the results 
+were nearly perfect.
+
+.. image:: ../Images/simulation.gif
+   :width: 5 in
+   :align: center
+
 CAD
 --------
-Stuff on CAD
+The majority of the components were first modeled in SolidWorks to ensure correct fitment. 
+This made the 3D printed parts easy to design, since their dimensions could be defined by 
+referencing other parts.
+
+.. image:: ../Images/CAD1.jpg
+
+The gear was designed using the SolidWorks toolbox to fit neatly over the power screw nut 
+and mesh with the original gear on the stepper motor.
+
+.. image:: ../Images/CAD2.jpg
 
 
 Manufacturing
@@ -57,7 +75,25 @@ Manufacturing
 
 BOM
 ^^^^^
-Create a bill of materials
+* Nucleo L476 Microcontroller
+* PM25S-048 Stepper Motors (2)
+* Motor Driver circuitry
+   * TMC2208 Stepper Drivers (2)
+   * TMC4210 Step/Direction Controllers (2)
+   * Miscellaneous electronics parts
+* `Limit Switch (2) <https://www.amazon.com/MXRS-Hinge-Momentary-Button-Switch/dp/B07MW2RPJY/ref=lp_5739467011_1_1?th=1>`_
+* `Power screw kit <https://www.youtube.com/watch?v=dQw4w9WgXcQ>`_
+* `3D Printed Parts <https://www.youtube.com/watch?v=dQw4w9WgXcQ>`_
+   * Support Connector (2)
+   * Large Gear (2)
+   * Lower Pen Connector
+   * Upper Pen Connector
+   * End Cap (2)
+* 6-32 3/8 machine screws, Socket head (8)
+* 8-32 1/4 machine screws (4)
+* 8-32 nuts (4)
+* 1/2 in Pan-head wood screws (4)
+* 3/8 in Plywood
 
 Our instructor provided the microcontroller used for the project: the Nucleo L476 equiped 
 with a 'Shoe of Brian' for accessing the native USB. 

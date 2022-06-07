@@ -4,6 +4,6 @@ Classes
 .. toctree::
    :maxdepth: 2
    
-   dcDriver
+   servo
    shares
    stepper
