@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Shares Class &#8212; ME 405 Term Project - Drawing Robot June 5th, 2022 documentation</title>
+    <title>Shares Class &#8212; ME 405 Term Project - Drawing Robot June 10th, 2022 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -16,7 +16,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Stepper Class" href="stepper.html" />
-    <link rel="prev" title="dcDriver module" href="dcDriver.html" />
+    <link rel="prev" title="Servo Class" href="dcDriver.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -47,22 +47,34 @@ before using get().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="shares.Queue.get">
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#shares.Queue.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>&#64;brief      Remove the first item from the front of the queue
-&#64;return     The value of the item removed</p>
+<dd><p>Remove the first item from the front of the queue</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The value of the item removed</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="shares.Queue.num_in">
 <span class="sig-name descname"><span class="pre">num_in</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#shares.Queue.num_in" title="Permalink to this definition">¶</a></dt>
-<dd><p>&#64;brief      Find the number of items in the queue. Call before get().
-&#64;return     The number of items in the queue</p>
+<dd><p>Find the number of items in the queue. Call before get().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The number of items in the queue</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="shares.Queue.put">
 <span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shares.Queue.put" title="Permalink to this definition">¶</a></dt>
-<dd><p>&#64;brief      Adds an item to the end of the queue.
-&#64;param item The new item to append to the queue.</p>
+<dd><p>Adds an item to the end of the queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>item</strong> – The new item to append to the queue.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -75,8 +87,12 @@ before using get().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="shares.Share.read">
 <span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#shares.Share.read" title="Permalink to this definition">¶</a></dt>
-<dd><p>&#64;brief      Access the value of the shared variable
-&#64;return    The value of the shared variable</p>
+<dd><p>Access the value of the shared variable</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The value of the shared variable</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -116,7 +132,7 @@ before using get().</p>
 <li class="toctree-l1"><a class="reference internal" href="Mechanical.html">Mechanical Design</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="code.html">Code</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="classes.html">Classes</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="dcDriver.html">dcDriver module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dcDriver.html">Servo Class</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Shares Class</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stepper.html">Stepper Class</a></li>
 </ul>
@@ -132,7 +148,7 @@ before using get().</p>
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="code.html">Code</a><ul>
   <li><a href="classes.html">Classes</a><ul>
-      <li>Previous: <a href="dcDriver.html" title="previous chapter">dcDriver module</a></li>
+      <li>Previous: <a href="dcDriver.html" title="previous chapter">Servo Class</a></li>
       <li>Next: <a href="stepper.html" title="next chapter">Stepper Class</a></li>
   </ul></li>
   </ul></li>

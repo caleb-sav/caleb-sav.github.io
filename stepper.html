@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Stepper Class &#8212; ME 405 Term Project - Drawing Robot June 5th, 2022 documentation</title>
+    <title>Stepper Class &#8212; ME 405 Term Project - Drawing Robot June 10th, 2022 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -43,7 +43,6 @@ with most any other driver via step and direction signals.</p>
 <dt class="sig sig-object py" id="stepper.Stepper">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">stepper.</span></span><span class="sig-name descname"><span class="pre">Stepper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ENN</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyb.Pin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CS</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyb.Pin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SCK</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyb.Timer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CLK</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyb.Timer.channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spi</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyb.SPI</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usrs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">48</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PULSE_div</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RAMP_div</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'Motor'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stepper.Stepper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class Description</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
@@ -179,6 +178,10 @@ driver datasheet.</p>
 <li><p><strong>REF_CONF</strong> (<em>bytes</em>) – Reference switch configuration</p></li>
 <li><p><strong>Vmin</strong> (<em>float</em>) – Minimum velocity before stopping (radians/sec)</p></li>
 <li><p><strong>Vmax</strong> (<em>float</em>) – Maximum velocity allowed (radians/sec)</p></li>
+<li><p><strong>Amax</strong> (<em>float</em>) – Maximum acceleration allowed (radians/sec^2)</p></li>
+<li><p><strong>save</strong> (<em>boolean</em>) – Determines whether the current configuration settings are 
+saved as attributes. On by default, switched off for temporary 
+setting changes.</p></li>
 </ul>
 </dd>
 </dl>
@@ -237,12 +240,23 @@ driver datasheet.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="stepper.Stepper.getLp">
 <span class="sig-name descname"><span class="pre">getLp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stepper.Stepper.getLp" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns the value of the lp bit, which indicates whether the reference switch is activated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Value of the lp bit; 0 for not active, 1 for active.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bytes</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="stepper.Stepper.homeInit">
 <span class="sig-name descname"><span class="pre">homeInit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stepper.Stepper.homeInit" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Arms the homing procedure. Once this method is called, the motor can be driven into the reference 
+switch.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="stepper.Stepper.readX">
@@ -333,13 +347,14 @@ whatever settings were previously used.</p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Mechanical.html">Mechanical Design</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="code.html">Code</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="classes.html">Classes</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="dcDriver.html">dcDriver module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="shares.html">Shares Class</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Stepper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html">Classes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tasks.html">Tasks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="InterfaceTask.html">InterfaceTask module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TaskData.html">TaskData module</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="TaskMotor.html">Motor Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TaskType.html">TaskType module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tasks.html">Tasks</a></li>
 </ul>
 </li>
 </ul>

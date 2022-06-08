@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>dcDriver module &#8212; ME 405 Term Project - Drawing Robot June 5th, 2022 documentation</title>
+    <title>Servo Class &#8212; ME 405 Term Project - Drawing Robot June 10th, 2022 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -33,26 +33,42 @@
 
           <div class="body" role="main">
             
-  <section id="module-dcDriver">
-<span id="dcdriver-module"></span><h1>dcDriver module<a class="headerlink" href="#module-dcDriver" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
+  <section id="servo-class">
+<h1>Servo Class<a class="headerlink" href="#servo-class" title="Permalink to this headline">¶</a></h1>
+<p>This class controls the pen-up and pen-down action of the robot. The class is
+designed for use with a standard hobby servo. It runs PWM at 50 Hz with pulse-widths
+between <strong>[Insert Value]</strong> and <strong>[Insert Value]</strong> to serve as the ‘up’ and ‘down’
+positions.</p>
+<span class="target" id="module-dcDriver"></span><dl class="py class">
 <dt class="sig sig-object py" id="dcDriver.dcDriver">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">dcDriver.</span></span><span class="sig-name descname"><span class="pre">dcDriver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">EN</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyb.Pin</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">pyb.Pin.cpu.A10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IN1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyb.Pin</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">pyb.Pin.cpu.B5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IN2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyb.Pin</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">pyb.Pin.cpu.B4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tim</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcDriver.dcDriver" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">dcDriver.</span></span><span class="sig-name descname"><span class="pre">dcDriver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PWM_pin</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyb.Pin</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">pyb.Pin.cpu.A0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timer</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ch</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcDriver.dcDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>PWM_pin</strong> (<em>pyb.Pin</em>) – Pin connected to the signal line for the servo.</p></li>
+<li><p><strong>timer</strong> (<em>integer</em>) – The timer number to be used for PWM. Set to Timer 2 by default.</p></li>
+<li><p><strong>ch</strong> (<em>integer</em>) – Channel number to be used for PWM. Set to Channel 1 by default.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="dcDriver.dcDriver.down">
 <span class="sig-name descname"><span class="pre">down</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dcDriver.dcDriver.down" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Sets the pen to the ‘down’ position.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dcDriver.dcDriver.toggle">
 <span class="sig-name descname"><span class="pre">toggle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dcDriver.dcDriver.toggle" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Toggles the pen between ‘up’ and ‘down’ positions.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dcDriver.dcDriver.up">
 <span class="sig-name descname"><span class="pre">up</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dcDriver.dcDriver.up" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Sets the pen to the ‘up’ position.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -79,13 +95,14 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Mechanical.html">Mechanical Design</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="code.html">Code</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="classes.html">Classes</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">dcDriver module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="shares.html">Shares Class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="stepper.html">Stepper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html">Classes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tasks.html">Tasks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="InterfaceTask.html">InterfaceTask module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TaskData.html">TaskData module</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="TaskMotor.html">Motor Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TaskType.html">TaskType module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tasks.html">Tasks</a></li>
 </ul>
 </li>
 </ul>

@@ -19,7 +19,7 @@ The video below shows the function of the device.
 
 .. raw:: html
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/xfr64zoBTAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/HhL63wO71e4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 As shown below, the drawing ability of the robot is fairly accurate.
 

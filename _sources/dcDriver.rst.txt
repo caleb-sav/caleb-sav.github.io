@@ -1,5 +1,9 @@
-dcDriver module
+Servo Class
 ===============
+This class controls the pen-up and pen-down action of the robot. The class is 
+designed for use with a standard hobby servo. It runs PWM at 50 Hz with pulse-widths 
+between **[Insert Value]** and **[Insert Value]** to serve as the 'up' and 'down' 
+positions.
 
 .. automodule:: dcDriver
    :members:

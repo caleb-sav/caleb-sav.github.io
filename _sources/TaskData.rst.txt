@@ -1,7 +1,9 @@
-TaskData module
+Data Task
 ===============
+[words about taskdata, as well as FSM]
 
-.. automodule:: TaskData
+
+.. automodule:: TaskDataFunctions
    :members:
    :undoc-members:
    :show-inheritance:

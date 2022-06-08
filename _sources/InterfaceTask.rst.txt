@@ -1,7 +1,30 @@
-InterfaceTask module
+Interface Task
 ====================
+The interface task allows a user to control the robot. It's main functions are to 
+allow the user to print a circle, line, custom image, or letters (typed by the user). 
+The finite state diagram is below.
 
-.. automodule:: InterfaceTask
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. image:: ../Images/InterfaceFSM.png
+
+**State 0: INIT** - Prints the available user actions:
+
+   * Draw a circle
+   * Draw a triangle
+   * Draw a custom image
+   * Accept and write a user input
+
+**State 1: WAIT_FOR_INPUT** - Waits for the user to input their selection. This is 
+a non-blocking replacement for the 'input' python method.
+
+**State 2: CIRCLE** - Sets the 'image' shared variable to 1. This is read later by 
+the Data Task to select which image to draw.
+
+**State 3: TRIANGLE** - Sets the 'image' shared variable to 2. This is read later by 
+the Data Task to select which image to draw.
+
+**State 4: CUSTOM** - Sets the 'image' shared variable to 3. This is read later by 
+the Data Task to select which image to draw.
+
+**State 5: TYPE** - Allows the user to type words to be written. Once a space is 
+entered, the preceding chunk is saved as a word. Once a return is entered, a shared 
+variable is changed to True to trigger the writing task.
