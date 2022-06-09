@@ -1,7 +1,13 @@
 Code
 =====
+All the code for this project was written in microPython, a version of Python that 
+has been optimized to run on the limited resources of microcontrollers. The main 
+structure is a cooperative multitasking system with tasks for interfacing with the 
+user, calculating the required motion, and driving the motors. A task diagram showing 
+the interaction of these tasks can be found below.
 
-Some words about the Code
+.. image:: ../Images/taskDiagram.png
+
 
 .. toctree::
    :maxdepth: 2

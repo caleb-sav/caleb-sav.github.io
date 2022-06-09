@@ -35,7 +35,12 @@
             
   <section id="code">
 <h1>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h1>
-<p>Some words about the Code</p>
+<p>All the code for this project was written in microPython, a version of Python that
+has been optimized to run on the limited resources of microcontrollers. The main
+structure is a cooperative multitasking system with tasks for interfacing with the
+user, calculating the required motion, and driving the motors. A task diagram showing
+the interaction of these tasks can be found below.</p>
+<img alt="_images/taskDiagram.png" src="_images/taskDiagram.png" />
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="classes.html">Classes</a><ul>
@@ -45,8 +50,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tasks.html">Tasks</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="InterfaceTask.html">InterfaceTask module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TaskData.html">TaskData module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="InterfaceTask.html">Interface Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TaskData.html">Data Task</a></li>
 <li class="toctree-l2"><a class="reference internal" href="TaskMotor.html">Motor Task</a></li>
 <li class="toctree-l2"><a class="reference internal" href="TaskType.html">TaskType module</a></li>
 </ul>

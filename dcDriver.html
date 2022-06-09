@@ -13,6 +13,7 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Shares Class" href="shares.html" />
@@ -37,7 +38,7 @@
 <h1>Servo Class<a class="headerlink" href="#servo-class" title="Permalink to this headline">¶</a></h1>
 <p>This class controls the pen-up and pen-down action of the robot. The class is
 designed for use with a standard hobby servo. It runs PWM at 50 Hz with pulse-widths
-between <strong>[Insert Value]</strong> and <strong>[Insert Value]</strong> to serve as the ‘up’ and ‘down’
+between 80,000 <span class="math notranslate nohighlight">\(\mu s\)</span> and 120,000 <span class="math notranslate nohighlight">\(\mu s\)</span> to serve as the ‘up’ and ‘down’
 positions.</p>
 <span class="target" id="module-dcDriver"></span><dl class="py class">
 <dt class="sig sig-object py" id="dcDriver.dcDriver">
@@ -95,14 +96,13 @@ positions.</p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Mechanical.html">Mechanical Design</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="code.html">Code</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="classes.html">Classes</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="tasks.html">Tasks</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="InterfaceTask.html">InterfaceTask module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="TaskData.html">TaskData module</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="TaskMotor.html">Motor Task</a></li>
-<li class="toctree-l3"><a class="reference internal" href="TaskType.html">TaskType module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="classes.html">Classes</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Servo Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shares.html">Shares Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stepper.html">Stepper Class</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="tasks.html">Tasks</a></li>
 </ul>
 </li>
 </ul>

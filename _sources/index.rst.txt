@@ -26,7 +26,7 @@ As shown below, the drawing ability of the robot is fairly accurate.
 **[Comparison of the drawing and the original file]**
 
 An interesting feature of this robot is the ability to write words typed by the 
-user. More detail can be found in the **[insert link]** task.
+user. More detail can be found in the :ref:`Type Task`.
 
 
 .. toctree::
@@ -35,12 +35,3 @@ user. More detail can be found in the **[insert link]** task.
 
    Mechanical
    code
-   
-  
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

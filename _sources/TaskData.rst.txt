@@ -1,6 +1,12 @@
 Data Task
 ===============
-[words about taskdata, as well as FSM]
+The data task calculates the positions for the motors to make the drawing. When 
+first run, the data task reads in an .hpgl file selected by the value of the 
+shared variable ``image`` (set in the :ref:`Interface Task`), then sets the 
+``calculated`` variable to False, triggering the next section. This section parses 
+the .hpgl file and uses the Newton-Raphson function (described below) to calculate 
+the necessary motion of the motors.
+
 
 
 .. automodule:: TaskDataFunctions

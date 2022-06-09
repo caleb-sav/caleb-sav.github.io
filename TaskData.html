@@ -36,7 +36,12 @@
             
   <section id="data-task">
 <h1>Data Task<a class="headerlink" href="#data-task" title="Permalink to this headline">¶</a></h1>
-<p>[words about taskdata, as well as FSM]</p>
+<p>The data task calculates the positions for the motors to make the drawing. When
+first run, the data task reads in an .hpgl file selected by the value of the
+shared variable <code class="docutils literal notranslate"><span class="pre">image</span></code> (set in the <a class="reference internal" href="InterfaceTask.html#interface-task"><span class="std std-ref">Interface Task</span></a>), then sets the
+<code class="docutils literal notranslate"><span class="pre">calculated</span></code> variable to False, triggering the next section. This section parses
+the .hpgl file and uses the Newton-Raphson function (described below) to calculate
+the necessary motion of the motors.</p>
 <span class="target" id="module-TaskDataFunctions"></span><dl class="py function">
 <dt class="sig sig-object py" id="TaskDataFunctions.NewtonRaphson">
 <span class="sig-prename descclassname"><span class="pre">TaskDataFunctions.</span></span><span class="sig-name descname"><span class="pre">NewtonRaphson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fnc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jacobian</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guess</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targ</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TaskDataFunctions.NewtonRaphson" title="Permalink to this definition">¶</a></dt>
@@ -80,7 +85,16 @@ The derivation of <span class="math notranslate nohighlight">\(k\)</span> can be
 <dl class="py function">
 <dt class="sig sig-object py" id="TaskDataFunctions.draw">
 <span class="sig-prename descclassname"><span class="pre">TaskDataFunctions.</span></span><span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TaskDataFunctions.draw" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Runs the Newton-Raphson function for each of the X Y points in the desired drawing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>i</strong> – Iterator to move through the list of X Y points.</p>
+</dd>
+<dt class="field-even">Return theta_calc</dt>
+<dd class="field-even"><p>The resulting motor angles from the Newton-Raphson function.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="TaskDataFunctions.g">
@@ -110,7 +124,20 @@ position, and <span class="math notranslate nohighlight">\(l\)</span> refers to 
 <dl class="py function">
 <dt class="sig sig-object py" id="TaskDataFunctions.move">
 <span class="sig-prename descclassname"><span class="pre">TaskDataFunctions.</span></span><span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">draw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vals</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TaskDataFunctions.move" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Groups a set of X Y points into a ‘shape,’ returning a set of points and a True/False 
+value representing pen-up or pen-down.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>draw</strong> (<em>boolean</em>) – Indicates if the pen should be up or down for this shape.</p></li>
+<li><p><strong>vals</strong> (<em>string</em>) – The .hpgl row that contains the points for the shape.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return shape</dt>
+<dd class="field-even"><p>A list of the form [Pen up/down value, X values, Y values].</p>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 

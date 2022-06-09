@@ -151,19 +151,19 @@ If a different driver is used, pleas modify the addresses accordingly!</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>0b00</p></td>
+<tr class="row-even"><td><p>00</p></td>
 <td><p>Ramp Mode: Driver controls velocity and acceleration to reach a 
 target position.</p></td>
 </tr>
-<tr class="row-odd"><td><p>0b01</p></td>
+<tr class="row-odd"><td><p>01</p></td>
 <td><p>Soft Mode: Similar to ramp mode, but approaches the target more 
 gently.</p></td>
 </tr>
-<tr class="row-even"><td><p>0b10</p></td>
+<tr class="row-even"><td><p>10</p></td>
 <td><p>Velocity Mode: Driver controls acceleration to reach a target 
 velocity.</p></td>
 </tr>
-<tr class="row-odd"><td><p>0b11</p></td>
+<tr class="row-odd"><td><p>11</p></td>
 <td><p>Hold Mode: The driver controls only step and direction, leaving 
 the microcontroller in full control of the velocity and acceleration.</p></td>
 </tr>
@@ -347,14 +347,13 @@ whatever settings were previously used.</p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Mechanical.html">Mechanical Design</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="code.html">Code</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="classes.html">Classes</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="tasks.html">Tasks</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="InterfaceTask.html">InterfaceTask module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="TaskData.html">TaskData module</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="TaskMotor.html">Motor Task</a></li>
-<li class="toctree-l3"><a class="reference internal" href="TaskType.html">TaskType module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="classes.html">Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dcDriver.html">Servo Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shares.html">Shares Class</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Stepper Class</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="tasks.html">Tasks</a></li>
 </ul>
 </li>
 </ul>

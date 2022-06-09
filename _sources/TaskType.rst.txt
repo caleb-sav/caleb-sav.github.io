@@ -1,7 +1,9 @@
-TaskType module
+Type Task
 ===============
+Type task is nearly identical to the data task, except that the input is not an 
+image selection, but a word via the ``send_word`` shared variable. Each letter of 
+the word is loaded, parsed, and drawn one at a time to minimize memory usage. The 
+input word is also scaled to fit the usable area to prevent the machine drawing 
+off the paper.
 
-.. automodule:: TaskType
-   :members:
-   :undoc-members:
-   :show-inheritance:
+More more details on the parsing and processing, see the :ref:`Data Task`.

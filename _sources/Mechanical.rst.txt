@@ -39,7 +39,7 @@ The bulk of the math involved for this project was in the kinematics. Getting fr
 to X Y coordinates was straightforward, but going back the other way is not. Fortunately, 
 the Newton-Raphson algorithm can help with this, iteratively applying input values to the 
 forward kinematics until X Y outputs reach the target. More information on this algorithm 
-can be found in the **[insert link for taskData]** task, but the building blocks (forward 
+can be found in the :ref:`Data Task`, but the building blocks (forward 
 kinematics and the jacobian) are derived below.
 
 .. image:: ../Images/handCalcs1.jpg
