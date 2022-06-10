@@ -20,17 +20,17 @@ connection to the static pen.
 .. image:: ../Images/prelimSketch2.jpg
    :width: 3 in
    :align: center
-   
-A rack and pinion seemed like a good option since the rack doesn't rotate, but it posed a 
-significant manufacturing challenge and could incur too much slop. We considered a smooth 
-rod with rubber rollers, but were concerned with slipping. 
 
+A rack and pinion seemed like a good option since the rack doesn't rotate, but it posed a 
+significant manufacturing challenge and could incur too much slop.
+
+.. image:: ../Images/prelimSketch2.jpg
+   :width: 3 in
+   :align: center
+   
+We also considered a smooth rod with rubber rollers, but were concerned with slipping. 
 Finally, we found a way to blend the best of these ideas into one using a power screw, but 
 instead of rotating the shaft, we planned to rotate the nut.
-
-**[Image here of the final sketch]**
-
-
 
 
 Analysis
@@ -86,7 +86,7 @@ BOM
    * Miscellaneous electronics parts
 * `Limit Switch (2) <https://www.amazon.com/MXRS-Hinge-Momentary-Button-Switch/dp/B07MW2RPJY/ref=lp_5739467011_1_1?th=1>`_
 * `Power screw kit <https://www.amazon.com/dp/B07P8P6J5V?ref=ppx_pop_mob_ap_share>`_
-* Bearings **[INSERT LINK]**
+* `Bearings <https://www.amazon.com/Othmro-Casting-Aligning-Pillow-Bearing/dp/B07YXM1HRY>`_
 * `3D Printed Parts <https://github.com/caleb-sav/ME405/tree/main/CAD%20Files/STL%20Files>`_
    * Support Connector (2)
    * Large Gear (2)

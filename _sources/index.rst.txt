@@ -12,7 +12,7 @@ Polar coordinates were a popular choice, but many other configurations emerged
 from our classmates. Our design consists of two variable radii, intersecting at 
 the end.
 
-.. image:: ../Images/cover.jpg
+.. image:: ../Images/cover.jpeg
 
 
 The video below shows the function of the device.
@@ -21,9 +21,24 @@ The video below shows the function of the device.
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/HhL63wO71e4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-As shown below, the drawing ability of the robot is fairly accurate.
+Below are some of the robots's drawings compared to the original files.
 
-**[Comparison of the drawing and the original file]**
+.. image:: ../Images/ParkerHPGL.jpg
+   :width: 4 in
+   :align: center
+   
+.. image:: ../Images/ParkerREAL.jpeg
+   :width: 4 in
+   :align: center
+   
+.. image:: ../Images/TriangleHPGL.jpg
+   :width: 3 in
+   :align: center
+   
+.. image:: ../Images/TriangleREAL.jpg
+   :width: 3 in
+   :align: center
+
 
 An interesting feature of this robot is the ability to write words typed by the 
 user. More detail can be found in the :ref:`Type Task`.
