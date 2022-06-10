@@ -24,7 +24,7 @@ connection to the static pen.
 A rack and pinion seemed like a good option since the rack doesn't rotate, but it posed a 
 significant manufacturing challenge and could incur too much slop.
 
-.. image:: ../Images/prelimSketch2.jpg
+.. image:: ../Images/prelimSketch3.jpg
    :width: 3 in
    :align: center
    
